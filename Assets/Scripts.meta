@@ -1,8 +1,21 @@
+<<<<<<< .mine
 fileFormatVersion: 2
 guid: 516c85f739c1f914c9a9202e4b8b7f9f
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
+=======
+fileFormatVersion: 2
+guid: a664fc16829484a408458f5aab2a7236
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> .theirs
   userData: 
+<<<<<<< .mine
   assetBundleName: 
   assetBundleVariant: 
+=======
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> .theirs
