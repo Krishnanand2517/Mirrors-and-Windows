@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] TrailRenderer trailRenderer;
     Rigidbody2D playerRb;
-    
+
+    int playerHealth = 3;
 
     float dashTime = 0.25f;
     float dashTimer = 0;
@@ -24,6 +25,12 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.instance.isGameOver)
+        {
+            animator.SetFloat("Speed", 0f);
+            return;
+        }
+
         dashTimer += Time.deltaTime;
 
         float moveX = 0f;
@@ -66,6 +73,13 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.instance.isGameOver)
+        {
+            Destroy(playerRb);
+            Destroy(gameObject.GetComponent<BoxCollider2D>());
+            return;
+        }
+
         playerRb.velocity = moveVector * moveSpeed;
 
         if (isDashButtonPressed)
@@ -84,6 +98,21 @@ public class PlayerController : MonoBehaviour
         trailRenderer.emitting = true;
         yield return new WaitForSeconds(0.05f);
         trailRenderer.emitting = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Arrow")
+        {
+            playerHealth--;
+            Destroy(collision.gameObject);
+            Debug.Log("Player Health : " + playerHealth.ToString());
+        }
+
+        if (playerHealth <= 0)
+        {
+            GameManager.instance.GameOver();
+        }
     }
 
     void Attack()
