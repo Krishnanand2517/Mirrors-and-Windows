@@ -24,10 +24,12 @@ public class MirrorManager : MonoBehaviour
         if (mirror.type == Dimension.Mirror)
         {
             mirror.source.clip = mirrorDimensionEnterSound;
+            StaticData.musicManager.PlayMusic(Dimension.Mirror);
         }
         else
         {
             mirror.source.clip = originalDimensionEnterSound;
+            StaticData.musicManager.PlayMusic(Dimension.Original);
         }
         mirror.source.Play();
     }
