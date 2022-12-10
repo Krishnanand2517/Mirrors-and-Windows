@@ -8,4 +8,5 @@ public static class StaticData
     public static CanvasController canvasController;
     public static GameObject player;
     public static Mirror connectedMirror;
+    public static MusicManager musicManager;
 }
