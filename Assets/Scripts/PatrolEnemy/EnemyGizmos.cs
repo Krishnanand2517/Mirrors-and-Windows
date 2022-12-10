@@ -15,6 +15,8 @@ public class EnemyGizmos : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if(enemy.points.Count == 0) return;
+        
         for (int i = 0; i < enemy.points.Count-1; i++)
         {
             Transform currentPoint = enemy.points[i];
