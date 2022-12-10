@@ -13,6 +13,7 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         StaticData.musicManager = this;
+        PlayMusic(Dimension.Original);
     }
 
     public void PlayMusic(Dimension dimension)
