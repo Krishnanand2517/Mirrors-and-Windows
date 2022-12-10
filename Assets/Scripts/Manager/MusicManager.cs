@@ -1,31 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MusicManager : MonoBehaviour
 {
-    public AudioClip mirrorWorldMusic;
-    public AudioClip originalWorldMusic;
+    public AudioSource mirrorWorldMusic;
+    public AudioSource originalWorldMusic;
 
-    private AudioSource source;
+    [Range(0,1)]public float musicVolume = 0.7f;
+
     void Start()
     {
-        source = GetComponent<AudioSource>();
         StaticData.musicManager = this;
-        PlayMusic(Dimension.Original);
     }
 
     public void PlayMusic(Dimension dimension)
     {
         if (dimension == Dimension.Mirror)
         {
-            source.clip = mirrorWorldMusic;
+            mirrorWorldMusic.volume = musicVolume;
+            originalWorldMusic.volume = 0;
         }
         else
         {
-            source.clip = originalWorldMusic;
+            originalWorldMusic.volume = musicVolume;
+            mirrorWorldMusic.volume = 0;
         }
-        
-        source.Play();
     }
 }
