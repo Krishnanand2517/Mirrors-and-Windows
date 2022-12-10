@@ -9,4 +9,5 @@ public static class StaticData
     public static GameObject player;
     public static Mirror connectedMirror;
     public static MusicManager musicManager;
+    public static DashBoardManager dashBoardManager;
 }

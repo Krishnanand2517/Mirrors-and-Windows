@@ -20,6 +20,8 @@ public class UnlockDoor : MonoBehaviour
             else
             {
                 Debug.Log("You need a key");
+                
+                StaticData.dashBoardManager.ShowDashBoard(new Vector2(2,6),"You need key to open that");
             }
         }
     }
