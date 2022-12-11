@@ -5,6 +5,7 @@ using UnityEngine;
 public class UnlockDoor : MonoBehaviour
 {
     [SerializeField] string keyName;
+    [SerializeField] private Vector2 positionOffDashBoard;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,6 +13,7 @@ public class UnlockDoor : MonoBehaviour
         {
             if (GameManager.instance.HasItem(keyName))
             {
+                StaticData.musicManager.PlaySound(StaticData.musicManager.openDoorSound);
                 Debug.Log("Next Level");
                 GameManager.instance.RemoveItem(keyName);
                 GameManager.instance.FinishLevel();
@@ -21,7 +23,7 @@ public class UnlockDoor : MonoBehaviour
             {
                 Debug.Log("You need a key");
                 
-                StaticData.dashBoardManager.ShowDashBoard(new Vector2(2,6),"You need key to open that",5);
+                StaticData.dashBoardManager.ShowDashBoard(positionOffDashBoard,"You need key to open that",5);
             }
         }
     }

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
+    public UnityAction<int> onHealthChanged;
+
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float dashAmount = 10f;
     [SerializeField] Animator animator;
@@ -21,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        
     }
 
     private void Update()
@@ -68,6 +72,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && dashTimer >= dashTime)
         {
             isDashButtonPressed = true;
+            StaticData.musicManager.PlaySound(StaticData.musicManager.dashSound);
         }
     }
 
@@ -100,10 +105,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Arrow")
+        string tag = collision.tag;
+        if (tag == "Arrow" || tag == "Ghost")
         {
-            playerHealth--;
-            Destroy(collision.gameObject);
+            GetDamage(1);
+
+            if(tag=="Arrow") Destroy(collision.gameObject);
+            
             Debug.Log("Player Health : " + playerHealth.ToString());
         }
 
@@ -115,6 +123,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void GetDamage(int damage)
+    {
+        playerHealth -= damage;
+        onHealthChanged?.Invoke(playerHealth);
+    }
+    
     void Attack()
     {
 
