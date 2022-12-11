@@ -21,7 +21,7 @@ public class UnlockGate : MonoBehaviour
             {
                 Debug.Log("You need a key");
 
-                StaticData.dashBoardManager.ShowDashBoard(new Vector2(50, 0), "You need key to open that");
+                StaticData.dashBoardManager.ShowDashBoard(new Vector2(50, 0), "You need key to open that", 3);
             }
         }
     }
