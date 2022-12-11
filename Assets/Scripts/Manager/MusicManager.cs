@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -8,7 +9,17 @@ public class MusicManager : MonoBehaviour
     public AudioSource mirrorWorldMusic;
     public AudioSource originalWorldMusic;
 
+    public AudioSource soundsSource;
+    [Header("Sounds")] 
+    public AudioClip walkSound;
+    public AudioClip dashSound;
+    public AudioClip openDoorSound;
+    public AudioClip uiClickSound;
+
+
     [Range(0,1)]public float musicVolume = 0.7f;
+    [Range(0,1)]public float soundsVolume = 0.7f;
+    
 
     void Start()
     {
@@ -29,4 +40,12 @@ public class MusicManager : MonoBehaviour
             mirrorWorldMusic.volume = 0;
         }
     }
+
+    public void PlaySound(AudioClip clip)
+    {
+        soundsSource.volume = soundsVolume;
+        soundsSource.clip = clip;
+        soundsSource.Play();
+    }
+    
 }

@@ -17,7 +17,7 @@ public class MirrorManager : MonoBehaviour
     public void TeleportInOtherDimension(Mirror connectedMirror)
     {
         var mirror = connectedMirror.transform;
-        StaticData.player.transform.position = mirror.position + mirror.right.normalized * 2;
+        StaticData.player.transform.position = mirror.position + Vector3.down ;
     }
     public void PlaySound(Mirror mirror)
     {

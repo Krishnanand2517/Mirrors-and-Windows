@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4939463304966477119}
   m_Layer: 0
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 4939463306544908642}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4939463304966477057
 BoxCollider2D:
@@ -73,7 +73,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dfba2e1d1d4714aa99c0271bea1392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   type: 1
   speed: 4
   waitTime: 1
@@ -165,7 +169,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ea04356de090ce74aaaaa9279fd9de9f, type: 3}
-  m_Color: {r: 0.5093986, g: 0.8584906, b: 0.18141682, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

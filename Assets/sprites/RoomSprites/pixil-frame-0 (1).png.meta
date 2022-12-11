@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c00755d21df6c9e46a1a85c891210719
+guid: 0dcb0cf1c089cc840bc3fa2bda274c0a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -143,13 +143,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 88218-video-game-portal-line-free-transparent-image-hd_0
+      name: pixil-frame-0 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97db3e88d0a2b1e4c89ca268c35972f9
+      internalID: -913385464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-0 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50d77c0bf15e2e4bb772f80de8ebe2e
+      internalID: 2087465303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-0 (1)_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 249
-        height: 592
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c9bd7f15e506024684b3067e6cdb281
-      internalID: -1173703841
+      spriteID: 79db8a7c337c70b42ac4ff87ffbf5d22
+      internalID: -199015379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 88218-video-game-portal-line-free-transparent-image-hd_1
+      name: pixil-frame-0 (1)_3
       rect:
         serializedVersion: 2
-        x: 249
+        x: 64
         y: 0
-        width: 249
-        height: 592
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,50 +220,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c750a5c73140e54594953a54ac80cc9
-      internalID: -1972338081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 88218-video-game-portal-line-free-transparent-image-hd_2
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 0
-        width: 249
-        height: 592
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c070336966ad253498c6d69a8c3605de
-      internalID: -1158941001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 88218-video-game-portal-line-free-transparent-image-hd_3
-      rect:
-        serializedVersion: 2
-        x: 747
-        y: 0
-        width: 249
-        height: 592
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5f7ffb275104684cb24490bac5346c6
-      internalID: -1356285613
+      spriteID: e3fd38f9a040372489d62f2c96c0f680
+      internalID: -1140362179
       vertices: []
       indices: 
       edges: []
@@ -237,10 +237,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      88218-video-game-portal-line-free-transparent-image-hd_0: -1173703841
-      88218-video-game-portal-line-free-transparent-image-hd_3: -1356285613
-      88218-video-game-portal-line-free-transparent-image-hd_1: -1972338081
-      88218-video-game-portal-line-free-transparent-image-hd_2: -1158941001
+      pixil-frame-0 (1)_0: -913385464
+      pixil-frame-0 (1)_3: -1140362179
+      pixil-frame-0 (1)_1: 2087465303
+      pixil-frame-0 (1)_2: -199015379
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
