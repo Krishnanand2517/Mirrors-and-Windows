@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private List<string> inventory = new List<string>();
+    public bool isGameOver = false;
 
     private void Awake()
     {
@@ -55,5 +56,11 @@ public class GameManager : MonoBehaviour
     public void FinishLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void GameOver()
+    {
+        isGameOver = true;
+        Debug.Log("GAME OVER!!!!");
     }
 }
