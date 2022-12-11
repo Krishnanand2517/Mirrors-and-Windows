@@ -8,6 +8,8 @@ public class DashBoardManager : MonoBehaviour
 {
     [SerializeField] private GameObject dashBoard;
 
+    private Coroutine waitCorutine;
+
     private TextAnimation textAnim;
     private void Start()
     {
@@ -15,12 +17,14 @@ public class DashBoardManager : MonoBehaviour
         textAnim = dashBoard.GetComponentInChildren<TextAnimation>();
     }
 
-    public void ShowDashBoard(Vector2 position, string text)
+    public void ShowDashBoard(Vector2 position, string text, int secForDisactivate)
     {
+        if(waitCorutine != null) StopCoroutine(waitCorutine);
+        
         dashBoard.SetActive(true);
         dashBoard.transform.position = position;
         textAnim.animatedText = text;
-        StartCoroutine(WaitSeconds(5));
+        StartCoroutine(WaitSeconds(secForDisactivate));
     }
     IEnumerator WaitSeconds(int seconds)
     {
